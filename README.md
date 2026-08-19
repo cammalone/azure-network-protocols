@@ -18,7 +18,7 @@
 
 <h2>Operating Systems Used </h2>
 
-- Windows 10 (21H2)
+- Windows 11 
 - Ubuntu Server 20.04
 
 <h2>Part 1: Create Resources</h2>
