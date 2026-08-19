@@ -24,7 +24,7 @@
 <h2>Part 1: Create Resources</h2>
 <ol>
   <li>Create a Resource Group in Azure.</li>
-  <li>Create a Windows 10 Virtual Machine (VM).</li>
+  <li>Create a Windows 11 Virtual Machine (VM).</li>
   <ul>
     <li>During the VM setup, select the Resource Group created earlier.</li>
     <li>Allow the creation of a new Virtual Network (Vnet) and Subnet for the VM.</li>
@@ -38,18 +38,18 @@
 
 <h2>Part 2: Observe ICMP Traffic</h2>
 <ol>
-  <li>Connect to the Windows 10 VM using Remote Desktop.</li>
-  <li>Install Wireshark within the Windows 10 VM.</li>
+  <li>Connect to the Windows 11 VM using Remote Desktop.</li>
+  <li>Install Wireshark within the Windows 11 VM.</li>
   <li>Open Wireshark and apply a filter to capture only ICMP traffic (used for ping commands).</li>
   <li>Retrieve the private IP address of the Ubuntu VM and attempt to ping it from the Windows 10 VM.</li>
   <ul>
     <li>Observe the ping requests and replies in Wireshark.</li>
   </ul>
-  <li>From the Windows 10 VM, open Command Prompt or PowerShell and ping a public website (such as <code>www.google.com</code>).</li>
+  <li>From the Windows 11 VM, open Command Prompt or PowerShell and ping a public website (such as <code>www.google.com</code>).</li>
   <ul>
     <li>Observe the public ping traffic in Wireshark.</li>
   </ul>
-  <li>Initiate a continuous ping from the Windows 10 VM to the Ubuntu VM.</li>
+  <li>Initiate a continuous ping from the Windows 11 VM to the Ubuntu VM.</li>
   <li>In the Azure portal, access the Network Security Group (NSG) assigned to the Ubuntu VM and disable inbound ICMP traffic.</li>
   <ul>
     <li>Observe how the ICMP traffic stops in Wireshark and the command line due to the blocked traffic.</li>
@@ -58,13 +58,13 @@
   <ul>
     <li>Observe the ICMP traffic start working again in Wireshark and on the command line.</li>
   </ul>
-  <li>Stop the continuous ping activity from the Windows 10 VM.</li>
+  <li>Stop the continuous ping activity from the Windows 11 VM.</li>
 </ol>
 
 <h2>Part 3: Observe SSH Traffic</h2>
 <ol>
   <li>In Wireshark, apply a filter to capture SSH traffic.</li>
-  <li>From the Windows 10 VM, establish an SSH connection to the Ubuntu VM using its private IP address.</li>
+  <li>From the Windows 11 VM, establish an SSH connection to the Ubuntu VM using its private IP address.</li>
   <ul>
     <li>Type commands (e.g., username, password) into the SSH session and observe the SSH traffic in Wireshark.</li>
     <li>Exit the SSH session by typing <code>exit</code> and pressing Enter.</li>
@@ -74,7 +74,7 @@
 <h2>Part 4: Observe DHCP Traffic</h2>
 <ol>
   <li>In Wireshark, apply a filter to capture DHCP traffic.</li>
-  <li>From the Windows 10 VM, attempt to request a new IP address using the command <code>ipconfig /renew</code>.</li>
+  <li>From the Windows 11 VM, attempt to request a new IP address using the command <code>ipconfig /renew</code>.</li>
   <ul>
     <li>Observe the DHCP traffic in Wireshark as the VM communicates with the DHCP server to renew its IP address.</li>
   </ul>
@@ -83,7 +83,7 @@
 <h2>Part 5: Observe DNS Traffic</h2>
 <ol>
   <li>In Wireshark, apply a filter to capture DNS traffic.</li>
-  <li>From the Windows 10 VM, use the <code>nslookup</code> command to resolve the IP addresses of websites like <code>google.com</code> and <code>disney.com</code>.</li>
+  <li>From the Windows 11 VM, use the <code>nslookup</code> command to resolve the IP addresses of websites like <code>google.com</code> and <code>disney.com</code>.</li>
   <ul>
     <li>Observe the DNS query and response traffic in Wireshark.</li>
   </ul>
